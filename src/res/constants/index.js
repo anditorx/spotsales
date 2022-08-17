@@ -1,0 +1,5 @@
+const ROUTE_NAMES = {
+  SPLASH_SCREEN: 'SPLASH_SCREEN',
+};
+
+export {ROUTE_NAMES};
