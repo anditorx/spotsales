@@ -9,8 +9,8 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
-import {colors, IMG_NO_AVA} from '../../res';
-import {Card, Header, ProductKnowledge} from '../../components';
+import {colors, IMG_DAILY_REPORT, IMG_NO_AVA} from '../../res';
+import {Card, Header, MainMenu, ProductKnowledge} from '../../components';
 
 const Home = () => {
   return (
@@ -34,6 +34,8 @@ const Home = () => {
         />
         {/* Product Knowledge */}
         <ProductKnowledge shimmer={false} />
+        {/* main menu horizontal scrollview */}
+        <MainMenu />
       </ScrollView>
     </SafeAreaView>
   );
@@ -59,4 +61,5 @@ const styles = StyleSheet.create({
     color: colors.primary,
     marginBottom: 20,
   },
+  //
 });
