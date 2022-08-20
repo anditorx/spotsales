@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import {colors, IMG_NO_AVA} from '../../res';
-import {Card, Header} from '../../components';
+import {Card, Header, ProductKnowledge} from '../../components';
 
 const Home = () => {
   return (
@@ -32,6 +32,8 @@ const Home = () => {
           area="Jakarta"
           nama_toko="MStore Ciledug"
         />
+        {/* Product Knowledge */}
+        <ProductKnowledge shimmer={false} />
       </ScrollView>
     </SafeAreaView>
   );
