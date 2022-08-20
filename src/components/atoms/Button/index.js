@@ -3,6 +3,14 @@ import React from 'react';
 import {colors} from '../../../res';
 
 const Button = ({...props}) => {
+  if (props?.type === 'btn-absen') {
+    return (
+      <TouchableOpacity style={styles.btnAbsen} onPress={props?.onPress}>
+        <Text style={styles.txtBtnAbsen}>{props?.text}</Text>
+      </TouchableOpacity>
+    );
+  }
+
   return (
     <TouchableOpacity
       style={styles.btn(props?.disable)}

@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import {colors, IMG_NO_AVA} from '../../res';
-import {Header} from '../../components';
+import {Card, Header} from '../../components';
 
 const Home = () => {
   return (
@@ -19,11 +19,19 @@ const Home = () => {
       <ScrollView showsVerticalScrollIndicator={false}>
         {/* header summary */}
         <Header
+          shimmer={false}
           type="header-summary"
           sellout="Rp0"
           target_store="Rp20.000.000"
         />
         {/* attendance card */}
+        <Card
+          shimmer={false}
+          id_spg={'0501001'}
+          name="Andi Rustianto"
+          area="Jakarta"
+          nama_toko="MStore Ciledug"
+        />
       </ScrollView>
     </SafeAreaView>
   );
