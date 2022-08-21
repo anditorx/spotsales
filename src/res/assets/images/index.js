@@ -6,6 +6,8 @@ import IMG_PRODUCTKNOWLEDGE from './img_productknowledge.png';
 import IMG_DAILY_REPORT from './img_daily_report.png';
 import IMG_STOCKCARD from './img_stockcard.png';
 import IMG_PROGRAM from './img_program.png';
+import IMG_ADD_PHOTO from './img_btn_add_photo.png';
+
 export {
   LOGO,
   IMG_LOGIN,
@@ -15,4 +17,5 @@ export {
   IMG_DAILY_REPORT,
   IMG_STOCKCARD,
   IMG_PROGRAM,
+  IMG_ADD_PHOTO,
 };

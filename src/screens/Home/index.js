@@ -9,10 +9,10 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
-import {colors, IMG_DAILY_REPORT, IMG_NO_AVA} from '../../res';
+import {colors} from '../../res';
 import {Card, Header, MainMenu, ProductKnowledge} from '../../components';
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle={'dark-content'} backgroundColor={'white'} />
@@ -23,6 +23,7 @@ const Home = () => {
           type="header-summary"
           sellout="Rp0"
           target_store="Rp20.000.000"
+          onPress={() => navigation.navigate('Akun')}
         />
         {/* attendance card */}
         <Card

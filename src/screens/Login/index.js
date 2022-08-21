@@ -24,7 +24,7 @@ const Login = ({navigation}) => {
   };
 
   const onPressLogin = () => {
-    navigation.navigate('Home');
+    navigation.navigate('MainTab');
   };
 
   return (

@@ -19,7 +19,7 @@ const ProductKnowledge = ({...props}) => {
 
   return (
     <View style={styles.wrapper}>
-      <Text style={styles.txt}>Download Informasi Produk </Text>
+      <Text style={styles.txt}>Informasi Produk </Text>
       <TouchableOpacity onPress={props?.onPress}>
         <Image source={IMG_PRODUCTKNOWLEDGE} style={styles.img} />
       </TouchableOpacity>
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   },
   txt: {
     color: colors.black,
-    fontSize: 18,
+    fontSize: 16,
     // fontFamily: 'Rambla-Regular',
     fontWeight: 'bold',
     marginBottom: 10,

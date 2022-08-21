@@ -1,7 +1,7 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import Shimmer from 'react-native-shimmer';
-import {colors, IMG_NO_AVA} from '../../../res';
+import {colors, IC_ArrowBackBlack, IMG_NO_AVA} from '../../../res';
 
 const Header = ({...props}) => {
   if (props?.shimmer) {
@@ -28,6 +28,17 @@ const Header = ({...props}) => {
     );
   }
 
+  if (props?.type === 'btn-back') {
+    return (
+      <View style={styles.container}>
+        <TouchableOpacity style={styles.touchable} onPress={props?.onPress}>
+          <IC_ArrowBackBlack />
+        </TouchableOpacity>
+        <Text style={styles.title}>{props?.title}</Text>
+      </View>
+    );
+  }
+
   if (props?.type === 'header-summary') {
     return (
       <View style={styles.wrapperHeaderSummary}>
@@ -43,7 +54,7 @@ const Header = ({...props}) => {
             </Text>
           </Text>
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={props?.onPress}>
           <Image
             source={props?.avatar ? props?.avatar : IMG_NO_AVA}
             style={{height: 50, width: 50, borderRadius: 50 / 2}}
@@ -62,6 +73,17 @@ const Header = ({...props}) => {
 export default Header;
 
 const styles = StyleSheet.create({
+  container: {
+    paddingVertical: 20,
+    paddingHorizontal: 20,
+    // backgroundColor: colors.white,
+    flexDirection: 'row',
+    alignItems: 'center',
+    elevation: 1,
+  },
+  touchable: {
+    zIndex: 99,
+  },
   wrapper: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -99,5 +121,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+  },
+  title: {
+    flex: 1,
+    textAlign: 'center',
+    fontSize: 25,
+    fontWeight: 'bold',
+    // color: type === 'dark' ? colors.white : colors.text.primary,
+    textTransform: 'capitalize',
+    color: 'black',
+    marginLeft: -20,
   },
 });
